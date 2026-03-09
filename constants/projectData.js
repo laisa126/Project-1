@@ -3,7 +3,7 @@ const PROJECT_DATA = [
         title: "Nexus Dashboard",
         description: "A high-performance SaaS analytics platform with real-time data visualization and team collaboration tools.",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-        tags: ["React", "D3.js", "Node.js"],
+        tags: ["Web App", "React", "D3.js"],
         link: "#"
     },
     {
@@ -17,28 +17,28 @@ const PROJECT_DATA = [
         title: "Skyline E-commerce",
         description: "Modern headless commerce solution featuring lightning-fast search, dynamic filtering, and seamless checkout.",
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-        tags: ["Next.js", "Stripe", "Prisma"],
+        tags: ["Web App", "Next.js", "Stripe"],
         link: "#"
     },
     {
         title: "Zenith AI",
         description: "AI-powered content generation tool using GPT-4 API with custom fine-tuning for brand voice consistency.",
         image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
-        tags: ["OpenAI", "Python", "FastAPI"],
+        tags: ["AI", "OpenAI", "Python"],
         link: "#"
     },
     {
         title: "Pulse Social",
-        description: "Privacy-focused social networking application with end-to-end encrypted messaging and zero-knowledge proofs.",
-        image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
-        tags: ["React Native", "Firebase", "WebRTC"],
+        description: "Decentralized social media platform focusing on privacy, data ownership, and community governance.",
+        image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80",
+        tags: ["Web3", "React", "IPFS"],
         link: "#"
     },
     {
-        title: "Lumina Design System",
-        description: "A comprehensive open-source UI library with accessibility at its core, used by thousands of developers.",
-        image: "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&w=800&q=80",
-        tags: ["Storybook", "SCSS", "Rollup"],
+        title: "Vision CMS",
+        description: "A headless content management system designed for high-traffic media publications and blogs.",
+        image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=800&q=80",
+        tags: ["Web App", "Node.js", "GraphQL"],
         link: "#"
     }
 ];

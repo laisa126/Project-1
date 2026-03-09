@@ -1,8 +1,16 @@
 const ProjectCard = ({ project }) => {
+    React.useEffect(() => {
+        lucide.createIcons();
+    }, []);
+
     return (
         <motion.div 
+            layout
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
             whileHover={{ y: -10 }}
-            className="group glass-effect rounded-3xl overflow-hidden flex flex-col"
+            className="group glass-effect rounded-3xl overflow-hidden flex flex-col h-full"
         >
             <div className="relative h-64 overflow-hidden">
                 <img 
@@ -11,7 +19,7 @@ const ProjectCard = ({ project }) => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent opacity-60"></div>
-                <div className="absolute bottom-4 left-4 flex gap-2">
+                <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
                     {project.tags.map(tag => (
                         <span key={tag} className="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-wider">
                             {tag}
@@ -28,10 +36,6 @@ const ProjectCard = ({ project }) => {
                     <a href={project.link} className="text-sm font-semibold flex items-center gap-2 text-indigo-400 hover:text-indigo-300">
                         View Case Study <i data-lucide="arrow-up-right" className="w-4 h-4"></i>
                     </a>
-                    <div className="flex gap-3">
-                        <a href="#" className="text-slate-500 hover:text-white transition-colors"><i data-lucide="github" className="w-5 h-5"></i></a>
-                        <a href="#" className="text-slate-500 hover:text-white transition-colors"><i data-lucide="external-link" className="w-5 h-5"></i></a>
-                    </div>
                 </div>
             </div>
         </motion.div>

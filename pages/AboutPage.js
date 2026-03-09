@@ -30,20 +30,20 @@ const AboutPage = () => {
                             </div>
                             <div className="p-4 glass-effect rounded-2xl">
                                 <div className="text-3xl font-bold text-indigo-500">40+</div>
-                                <div className="text-sm text-slate-400">Projects Completed</div>
+                                <div className="text-sm text-slate-400">Projects Delivered</div>
                             </div>
                         </div>
                     </div>
 
                     <div className="space-y-8">
-                        {skills.map((skillGroup, idx) => (
+                        {skills.map((group, idx) => (
                             <div key={idx}>
-                                <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                                <h4 className="text-lg font-bold mb-4 text-indigo-400 flex items-center gap-2">
                                     <span className="w-2 h-2 bg-indigo-500 rounded-full"></span>
-                                    {skillGroup.category}
+                                    {group.category}
                                 </h4>
                                 <div className="flex flex-wrap gap-3">
-                                    {skillGroup.items.map(skill => (
+                                    {group.items.map(skill => (
                                         <SkillBadge key={skill} name={skill} />
                                     ))}
                                 </div>

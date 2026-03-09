@@ -5,11 +5,12 @@ const Navbar = () => {
     React.useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
+        lucide.createIcons();
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     return (
-        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-4 glass-effect' : 'py-6 bg-transparent'}`}>
+        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-4 glass-effect shadow-2xl shadow-black/20' : 'py-6 bg-transparent'}`}>
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 <a href="#" className="text-2xl font-bold tracking-tighter flex items-center gap-2">
                     <span className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white text-sm">A</span>
@@ -33,35 +34,29 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Toggle */}
-                <button className="md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                <button 
+                    className="md:hidden text-white"
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                >
                     <i data-lucide={mobileMenuOpen ? "x" : "menu"}></i>
                 </button>
             </div>
 
             {/* Mobile Menu */}
-            <AnimatePresence>
-                {mobileMenuOpen && (
-                    <motion.div 
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-full left-0 w-full glass-effect border-t border-white/10 p-6 md:hidden"
-                    >
-                        <div className="flex flex-col gap-4">
-                            {NAV_LINKS.map(link => (
-                                <a 
-                                    key={link.label} 
-                                    href={link.href} 
-                                    onClick={() => setMobileMenuOpen(false)}
-                                    className="text-lg font-medium text-slate-300"
-                                >
-                                    {link.label}
-                                </a>
-                            ))}
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            {mobileMenuOpen && (
+                <div className="md:hidden absolute top-full left-0 w-full glass-effect border-t border-white/5 p-6 space-y-4">
+                    {NAV_LINKS.map(link => (
+                        <a 
+                            key={link.label} 
+                            href={link.href}
+                            className="block text-lg font-medium text-slate-300"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            {link.label}
+                        </a>
+                    ))}
+                </div>
+            )}
         </nav>
     );
 };
