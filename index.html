@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Dev | Full Stack Engineer Portfolio</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- React and Dependencies -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/cards.css">
+</head>
+<body class="bg-[#030712] text-slate-200 selection:bg-indigo-500/30">
+    <div id="root"></div>
+
+    <!-- Config & Constants -->
+    <script type="text/babel" src="config/themeConfig.js"></script>
+    <script type="text/babel" src="constants/navigationLinks.js"></script>
+    <script type="text/babel" src="constants/projectData.js"></script>
+
+    <!-- Utils -->
+    <script type="text/babel" src="utils/formatDate.js"></script>
+
+    <!-- Components -->
+    <script type="text/babel" src="components/Navbar.js"></script>
+    <script type="text/babel" src="components/ProjectCard.js"></script>
+    <script type="text/babel" src="components/SkillBadge.js"></script>
+    <script type="text/babel" src="components/SectionHeading.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+
+    <!-- Pages -->
+    <script type="text/babel" src="pages/HeroSection.js"></script>
+    <script type="text/babel" src="pages/AboutPage.js"></script>
+    <script type="text/babel" src="pages/ProjectsPage.js"></script>
+    <script type="text/babel" src="pages/ContactPage.js"></script>
+
+    <!-- Main App -->
+    <script type="text/babel" src="App.js"></script>
+    <script type="text/babel">
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+    </script>
+</body>
+</html>
